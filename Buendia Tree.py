@@ -8,11 +8,11 @@ def initialize():
     pyDatalog.create_terms(variables + ', ' + functions)
 
 def load_data():
-    generations = data.load_data()
+    generations = data.load_data(pyDatalog)
     return generations
 
 def load_logic():
-    logic.load_logic()
+    logic.load_logic(pyDatalog)
 
 def main():
     initialize()

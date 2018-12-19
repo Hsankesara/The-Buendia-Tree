@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 from pyDatalog import  pyDatalog
 import data
 import logic
@@ -16,8 +17,12 @@ def load_logic():
 
 def main():
     initialize()
-    load_data()
+    generations = load_data()
     load_logic()
+    query = "parent(X, Y)"
+    answers = pyDatalog.ask(query).answers
+    for ans in answers:
+        print(repr(ans[0]).encode('utf-8'))
 
 if __name__ == "__main__":
     main()

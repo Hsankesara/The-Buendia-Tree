@@ -22,7 +22,7 @@ def main():
     query = "parent(X, Y)"
     answers = pyDatalog.ask(query).answers
     for ans in answers:
-        print(repr(ans[0]).encode('utf-8'))
+        print(ans)
 
 if __name__ == "__main__":
     main()

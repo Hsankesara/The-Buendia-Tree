@@ -1,6 +1,6 @@
 def load_data(pyDatalog):
     #Generation 1
-    gen1 = ["José Arcadio Buendía", "Úrsula Iguarán"]
+    gen1 = ["Jose Arcadio Buendia", "Ursula Iguaran"]
     pyDatalog.assert_fact('married', gen1[0], gen1[1])
     pyDatalog.assert_fact('cousin', gen1[0], gen1[1])
     pyDatalog.assert_fact('buendia_blood', gen1[0], True)
@@ -9,7 +9,7 @@ def load_data(pyDatalog):
     pyDatalog.assert_fact('gender', gen1[1], 'Female')
 
     # Generation 2
-    gen2 = ["Colonel Aureliano Buendía", "José Arcadio Buendía (II)", "Amaranta Buendía", "Pilar Ternera", "Remedios Moscote", "Rebeca Buendía"]
+    gen2 = ["Colonel Aureliano Buendia", "Jose Arcadio Buendia (II)", "Amaranta Buendia", "Pilar Ternera", "Remedios Moscote", "Rebeca Buendia"]
     pyDatalog.assert_fact('parent', gen1[0], gen2[0])
     pyDatalog.assert_fact('parent', gen1[1], gen2[0])
     pyDatalog.assert_fact('parent', gen1[0], gen2[1])
@@ -39,7 +39,7 @@ def load_data(pyDatalog):
 
 
     # Generation 3
-    gen3 = ["The 17 Aurelianos", "Aureliano José Buendía", "Arcadio (José Arcadio III)", "Santa Sofía de la Piedad"]
+    gen3 = ["The 17 Aurelianos", "Aureliano Jose Buendia", "Arcadio (Jose Arcadio III)", "Santa Sofia de la Piedad"]
     pyDatalog.assert_fact('parent', gen2[0], gen3[0])
     pyDatalog.assert_fact('parent', gen2[0], gen3[1])
     pyDatalog.assert_fact('parent', gen2[3], gen3[1])
@@ -60,7 +60,7 @@ def load_data(pyDatalog):
     pyDatalog.assert_fact('married', gen3[2], gen3[3])
 
     # Generation 4
-    gen4 = ["Remedios the Beauty", "Fernanda del Carpio", "Aureliano Segundo Buendía", "José Arcadio Segundo Buendía"]
+    gen4 = ["Remedios the Beauty", "Fernanda del Carpio", "Aureliano Segundo Buendia", "Jose Arcadio Segundo Buendia"]
     pyDatalog.assert_fact('parent', gen3[2], gen4[0])
     pyDatalog.assert_fact('parent', gen3[3], gen4[0])
     pyDatalog.assert_fact('parent', gen3[2], gen4[2])
@@ -81,7 +81,7 @@ def load_data(pyDatalog):
     pyDatalog.assert_fact('buendia', gen4[3], True)
     pyDatalog.assert_fact('married', gen4[2], gen4[1])
 
-    gen5 = ['José Arcadio Buendía (IV)', 'Renata Remedios Buendía (Meme)', 'Mauricio Babilonia', 'Amaranta Úrsula Buendía']
+    gen5 = ['Jose Arcadio Buendia (IV)', 'Renata Remedios Buendia (Meme)', 'Mauricio Babilonia', 'Amaranta Ursula Buendia']
     pyDatalog.assert_fact('parent', gen4[2], gen5[0])
     pyDatalog.assert_fact('parent', gen4[1], gen5[0])
     pyDatalog.assert_fact('parent', gen4[2], gen5[1])

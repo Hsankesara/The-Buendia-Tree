@@ -117,5 +117,4 @@ def load_data(pyDatalog):
     pyDatalog.assert_fact('parent', gen5[3], gen7[0])
     pyDatalog.assert_fact('buendia_blood', gen7[0], True)
     pyDatalog.assert_fact('buendia', gen7[0], True)
-
-    return [gen1, gen2, gen3, gen4, gen5, gen6, gen7]
+    return

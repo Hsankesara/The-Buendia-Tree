@@ -9,20 +9,15 @@ def initialize():
     pyDatalog.create_terms(variables + ', ' + functions)
 
 def load_data():
-    generations = data.load_data(pyDatalog)
-    return generations
+    data.load_data(pyDatalog)
 
 def load_logic():
     logic.load_logic(pyDatalog)
 
 def main():
     initialize()
-    generations = load_data()
+    load_data()
     load_logic()
-    query = "parent(X, Y)"
-    answers = pyDatalog.ask(query).answers
-    for ans in answers:
-        print(ans)
 
 if __name__ == "__main__":
     main()

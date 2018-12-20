@@ -54,6 +54,29 @@ class TestFamily(unittest.TestCase):
         expected_answers = [("Arcadio (Jose Arcadio III)", )]
         self.assertEqual(expected_answers, answers)
     
+    def test_aunt(self):
+        query = 'aunt(X, "Aureliano (II)")'
+        answers = pyDatalog.ask(query).answers
+        expected_answers = [("Amaranta Ursula Buendia", )]
+        self.assertEqual(expected_answers, answers)
+    
+    def test_uncle(self):
+        query = 'uncle(X, "Aureliano (II)")'
+        answers = sorted(pyDatalog.ask(query).answers)
+        expected_answers = sorted([("Gaston", ), ("Jose Arcadio Buendia (IV)", )])
+        self.assertEqual(expected_answers, answers)
+    
+    def test_ancestor(self):
+        query = 'ancestor(X, "Aureliano (II)")'
+        answers = sorted(pyDatalog.ask(query).answers)
+        expected_answers = ("Fernanda del Carpio", )
+        self.assertIn(expected_answers, answers)
+    
+    def test_decendent(self):
+        query = 'decendent(X, "Fernanda del Carpio")'
+        answers = sorted(pyDatalog.ask(query).answers)
+        expected_answers = ("Aureliano (II)", )
+        self.assertIn(expected_answers, answers)
 
 def main():
     buendia_tree.main()

@@ -60,9 +60,14 @@ Alongside this, It is also a basic block of Markov Logic Networks which has a po
 ## The Buendia Domain
 Let's come to Buendia tree again. Now as we know First order logic is dependent on two entities data and Logic.
 ### Data
-In this domain, the only input data used is marriage between two individuals and their children. Every other relation is derived from the logic itself.
+In this domain, the only input data used is marriage between two individuals, the parent-child relationship and gender of the individuals. Everything else is derived using logical rules.
 ### Logic
 You can checkout all the logical rules [here](/logic.py)
+### Test
+To run test file
+```bash
+python3 -m unittest test.py
+```
 
 ## References
 1. [First Order Logic](https://leanprover.github.io/logic_and_proof/first_order_logic.html)

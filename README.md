@@ -1,9 +1,8 @@
 # The Buendia Tree
-The Buendia Tree is the implementation of extended Kinship domain problem using **First Order Logic**. Kinship domain is a set of logical rules which represents family relationships or kinships. The Buendia family has seven generations. It is inspired from the book *One Hundred Years of Solitude*.  It is not like a normal family and sometimes has pretty messed up relationships (You'd know if you read the book). The family tree looks like thisgit
+The Buendia Tree is the implementation of extended Kinship domain problem using **First Order Logic**. Kinship domain problem is a task to find out relationship or kinship between family members. In this repository, relationship between members of Buendia family has been described using First Order Logic. It is taken from the book *One Hundred Years of Solitude* and it has seven generations. It is not like a normal family and sometimes has pretty messed up relationships (You'd know if you read the book). The family tree looks like this
 
 ![Buendia Family Tree](/oyos_characters_tree_420.jpg)
 
-Now you might be wondering what is **First Order Logic**
 
 ## First Order Logic
 In formal terms First Order Logic is defined as a set of logical rules which are explicitly defined to describe a problem. Every problem is operated under some set of rules which are intrinsic part of the problem. It is the way to exploit those rules and define objects and individuals, as well as their properties and the relationships between them. Sounds Confusing? Let's take an example in kinship domain.
@@ -33,15 +32,15 @@ Symbols which connect the clauses.
 For Example : not (~), and (^), or (v), implies (=>), if and only if (<=>)
 
 ## Inference
-Inferences are made when a person (or machine) goes beyond available evidence to form a conclusion. With a deductive inference, this conclusion always follows the stated premises. In other words, if the premises are true, then the conclusion is valid. First Order Logic in deductive inference involves conditional reasoning problems which follow the "if A, then B" format i.e. the process of deriving new relation using set of logical rules using is known as inference.
-The Inference can made by following processes:
+Inferences are made when a person (or machine) goes beyond available evidence to form a conclusion. With a deductive inference, this conclusion always follows the stated premises. In other words, if the premises are true, then the conclusion is valid. First Order Logic in deductive inference involves conditional reasoning problems which follow the "if A, then B" format i.e. the process of deriving new relation using set of logical rules is known as inference.
+The Inference can be derived by following processes:
 ### Unification
 Unification in logic is a kind of logical substitution. For instance it is given that **Knows(John, Jane)** and we have to find **Knows(John,x)** i.e. person who knows John so We can unify both of them and say that Jane knows John. It is a basic building block of Inference model.
 Formally Unnification procedure can be defined as:
 *Unify(P,Q)* takes two atomic(i.e. single predicates) sentences P and Q and returns a substitution that makes P and Q identical.
 
 ### Forward Chaining
-Forward  Chaining is one of the most basic inference algorithm. In layman terms, It only follows the True logical statements i.e. given A is True it do exaustive search to find all the logical statements which are True due to that and then repeat the same procedure using derived true logical statements. To understand it better let us take a classic example:
+Forward chaining starts with the available data and uses inference rules to extract more data (from an end user, for example) until a goal is reached. An inference engine using forward chaining searches the inference rules until it finds one where the antecedent (If clause) is known to be true. When such a rule is found, the engine can conclude, or infer, the consequent (Then clause), resulting in the addition of new information to its data. To understand it better let us take a classical example:
 Given that:*The law says that it is a crime for an American to sell weapons to hostile nations. The country Nono, an enemy of America, has some missiles, and all of its missiles were sold to it by Colonel West, who is American.*.
 
 Step 1: West is an American(Given) |  Nono owns missiles(Given) | Nono is an enemy of America(Given)
@@ -53,17 +52,17 @@ Step 3: West is a criminal(Since West is american who sold weapon to hostile cou
 
 ![Forward Chaining](/forward_chaining_example.png)
 
-But this method would take exponential time in a well defined world. There are many advanced inference algorithms are available such as *Backward Chaining*, *Resolution Refutation Procedure* and  *lifted inference*. You can read  about them [here](http://pages.cs.wisc.edu/~dyer/cs540/notes/fopc.html)   
+But this method would take exponential time in a well defined world. There are many advanced inference algorithms are available such as *Backward Chaining*, *Resolution Refutation Procedure* and  *lifted inference*. You can read  about them [here](http://pages.cs.wisc.edu/~dyer/cs540/notes/fopc.html)  
 
 ## Application of First Order Logic
-First order logic is a deterministic model and that is why alone it has very few advantages. Since the uprising of AI, It became an intrinsic part of it. Since AI usually works on system and that system has to follow some rules, First Order  Logic became the most expressive as well as simple way to represent those rules.
+First order logic is a deterministic model and that is why alone it has very few advantages. Since the uprising of AI, It became an intrinsic part of it. AI usually works on system and that system has to follow some rules therefore First Order  Logic became the most expressive as well as simplest way to represent those rules.
 Alongside this, It is also a basic block of Markov Logic Networks which has a potential to revolutionalize artificial intelligence.
 ## The Buendia Domain
 Let's come to Buendia tree again. Now as we know First order logic is dependent on two entities data and Logic.
 ### Data
-In this domain, the only input data I used is marriage between two objects and there children. Every other relation is derived from the logic itself.    
+In this domain, the only input data used is marriage between two individuals and their children. Every other relation is derived from the logic itself.
 ### Logic
-Checkout logic rules [here](/logic.py)
+You can checkout all the logical rules [here](/logic.py)
 
 ## References
 1. [First Order Logic](https://leanprover.github.io/logic_and_proof/first_order_logic.html)
